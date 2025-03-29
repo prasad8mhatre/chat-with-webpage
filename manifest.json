@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "AI Chatbot for Any Website",
+  "version": "1.0",
+  "description": "Turns any website into an interactive chatbot using Google Gemini Flash 2.0.",
+  "permissions": ["storage", "scripting", "activeTab", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "config.html",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "web_accessible_resources": [{
+    "resources": ["lib/*", "images/*"],
+    "matches": ["<all_urls>"]
+  }]
+}

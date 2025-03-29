@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="ai-chat-extension">
+<head>
+  <title>AI Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="lib/github.min.css">
+  <link rel="stylesheet" href="lib/github-markdown.min.css">
+  <script src="lib/purify.min.js"></script>
+  <script src="lib/marked.min.js"></script>
+  <script src="lib/highlight.min.js"></script>
+</head>
+<body>
+  <div id="chatbot-popup">
+    <div id="chatbot-header">
+      <span>AI Chatbot</span>
+      <img id="settings-icon" src="images/settings-icon.svg" alt="Settings" />
+    </div>
+    <div id="chat-output"></div>
+    <div id="chat-input-container">
+      <input id="chat-input" placeholder="Type your message and press Enter..." />
+      <button id="send-button">Send</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

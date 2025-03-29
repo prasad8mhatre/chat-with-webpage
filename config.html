@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Chatbot Settings</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    button {
+      background: #0078d7;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .status {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .success { background: #e6ffe6; color: #006600; }
+    .error { background: #ffe6e6; color: #660000; }
+  </style>
+</head>
+<body>
+  <h2>AI Chatbot Settings</h2>
+  <div class="form-group">
+    <label for="gemini-key">Gemini API Key</label>
+    <input type="text" id="gemini-key" placeholder="Enter your Gemini API key">
+  </div>
+  <button id="save-btn">Save Settings</button>
+  <div id="status"></div>
+  <script src="config.js"></script>
+</body>
+</html>

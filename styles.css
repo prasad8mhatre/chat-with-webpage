@@ -1,0 +1,240 @@
+/* Reset styles only for extension popup */
+.ai-chat-extension {
+  all: initial;
+}
+
+.ai-chat-extension body {
+  margin: 0;
+  padding: 0;
+  width: 600px;
+  height: 800px;
+  overflow: hidden;
+  background: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ai-chat-extension #ai-chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.ai-chat-extension #chatbot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #0078d7;
+  color: white;
+}
+
+.ai-chat-extension #settings-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.ai-chat-extension #chatbot-body {
+  flex: 1;
+  padding: 20px; /* Added padding for a cleaner look */
+  overflow-y: auto;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap for better spacing */
+}
+
+.ai-chat-extension #chatbot-footer {
+  display: flex;
+  padding: 10px;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+}
+
+.ai-chat-extension #chatbot-input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-size: 14px;
+  outline: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+}
+
+.ai-chat-extension #chatbot-send {
+  background: #0078d7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ai-chat-extension .user-message {
+  align-self: flex-end;
+  background: #0078d7;
+  color: white;
+  margin: 4px 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border-bottom-right-radius: 4px;
+  line-height: 1.4;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ai-chat-extension .bot-message {
+  align-self: flex-start;
+  background: #f1f1f1;
+  color: black;
+  margin: 4px 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border-bottom-left-radius: 4px;
+  line-height: 1.4;
+  max-width: 90%;
+  overflow-x: auto;
+  word-wrap: break-word;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ai-chat-extension #chat-output {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ai-chat-extension #chat-input-container {
+  position: relative;
+  padding: 15px 20px;
+  background: #ffffff;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  gap: 10px;
+}
+
+.ai-chat-extension #chat-input {
+  flex: 1;
+  padding: 12px 20px;
+  border: 1px solid #dee2e6;
+  border-radius: 25px;
+  outline: none;
+  font-size: 15px;
+  transition: border-color 0.2s;
+}
+
+.ai-chat-extension #chat-input:focus {
+  border-color: #0078d7;
+  box-shadow: 0 0 0 2px rgba(0,120,215,0.2);
+}
+
+.ai-chat-extension #send-button {
+  padding: 12px 24px;
+  background: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ai-chat-extension #send-button:hover {
+  background: #006cbd;
+}
+
+.ai-chat-extension .user-message, .ai-chat-extension .bot-message {
+  max-width: 80%;
+  margin: 4px 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  line-height: 1.4;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.ai-chat-extension @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ai-chat-extension .message-label {
+  font-weight: bold;
+  display: block; /* Ensures the label is on its own line */
+  margin-bottom: 5px; /* Adds spacing between label and message */
+}
+
+.ai-chat-extension .markdown-body {
+  padding: 10px;
+  line-height: 1.6;
+}
+
+.ai-chat-extension .markdown-body h1,
+.ai-chat-extension .markdown-body h2,
+.ai-chat-extension .markdown-body h3 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.ai-chat-extension .markdown-body p {
+  margin: 8px 0;
+}
+
+.ai-chat-extension .markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  padding: 16px;
+  overflow: auto;
+}
+
+.ai-chat-extension .markdown-body code {
+  background-color: rgba(175,184,193,0.2);
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+}
+
+.ai-chat-extension .citation-wrapper {
+  display: inline;
+  font-size: 0.9em;
+  color: #666;
+  background: rgba(0, 120, 215, 0.05);
+  border-radius: 4px;
+}
+
+.ai-chat-extension .citation-icon {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.ai-chat-extension .citation-text {
+  font-style: italic;
+  color: #0078d7;
+  display: none;
+}
+
+.ai-chat-extension .citation-wrapper:hover .citation-text {
+  display: inline;
+}
+
+/* Remove old citation styles */
+.ai-chat-extension .cited-content, .ai-chat-extension .quote-mark, .ai-chat-extension .quote-tooltip {
+  display: none;
+}
